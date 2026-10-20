@@ -1,12 +1,12 @@
 # K-DRIFT pilot homepage
 
-D안의 이미지 중심 디자인을 선택한 파일럿 홈페이지입니다. 구성원 의견 수렴을 위해 공개한 사이트이며, 하단에 `PILOT 05`를 표시합니다.
+D안의 이미지 중심 디자인을 선택한 파일럿 홈페이지입니다. 구성원 의견 수렴을 위해 공개한 사이트이며, 하단에 `PILOT 06`를 표시합니다.
 
 - 홈페이지: https://kasishongscience.github.io/kdrift/
 - `index.html`: 연구 소개·관측 성과·망원경·연구팀, 연구 심화·SIDM, 관측 기술, 성과 검증, G1 탐사 계획, 논문·영상·보도자료, 하단 S-DRIFT 소개
 - `pilot.css`: 파일럿 레이아웃과 반응형 스타일
 - `d.css` / `shared.css`: 기존 D안의 기본 스타일
-- `shared.js`: 모바일 메뉴와 이미지 확대
+- `shared.js`: 모바일 메뉴, 이미지 확대, 클릭 후 이메일 표시·숨기기
 - `research.css` / `research.js`: 심화 본문·기술 표·성과·자료실과 논문 주제 필터
 - `assets/`: 사용 이미지, KASI CI, 공개 홍보 PDF
 - `a.html` / `d.html`: 기존 개별 시안 주소를 홈페이지로 연결
@@ -15,7 +15,7 @@ D안의 이미지 중심 디자인을 선택한 파일럿 홈페이지입니다.
 
 GitHub Pages는 `main` 브랜치의 루트에서 배포합니다. 별도 설치나 빌드가 필요하지 않습니다. `.nojekyll`은 정적 파일을 그대로 게시하도록 합니다.
 
-내용은 `index.html`, 기본 화면 구성은 `pilot.css`, 심화 영역은 `research.css`, 사진은 `assets/`에서 수정하고 커밋한 뒤 push합니다. `assets/`의 파일명과 HTML 참조를 함께 수정하세요. CSS/JS를 변경하면 해당 파일의 HTML 캐시 버전도 갱신합니다(현재 `research.css?v=pilot05`). 배포 후 Pages 최신 빌드의 커밋이 방금 올린 커밋과 일치하는지 확인합니다.
+내용은 `index.html`, 기본 화면 구성은 `pilot.css`, 심화 영역은 `research.css`, 사진은 `assets/`에서 수정하고 커밋한 뒤 push합니다. `assets/`의 파일명과 HTML 참조를 함께 수정하세요. CSS/JS를 변경하면 해당 파일의 HTML 캐시 버전도 갱신합니다(현재 `research.css?v=pilot06`, `shared.js?v=pilot06`). 배포 후 Pages 최신 빌드의 커밋이 방금 올린 커밋과 일치하는지 확인합니다.
 
 로컬 미리보기: 이 폴더에서 `python3 -m http.server 8765 --bind 127.0.0.1`을 실행하고 `http://127.0.0.1:8765/`를 엽니다.
 
@@ -115,3 +115,26 @@ SIDM 및 S-DRIFT 관련 새 내용은 이번 문체 수정에 포함하지 않�
 ### 확인 기록
 
 HTML의 로컬 참조 47개와 중복 없는 ID 33개, 논문 수(기술 4 / 과학 4)를 확인했다. 데스크톱 1280px 및 모바일 390px·320px에서 가로 넘침 없이 표시된다. 모바일 메뉴의 연구 심화 이동, 새 SIDM 바로가기, 논문 필터(전체 8 / 과학연구 4)를 확인했다. JavaScript와 기존 이미지 파일은 변경하지 않았다.
+
+## PILOT 06 — Published 목록 반영과 이메일 노출 축소 (2026-10-20)
+
+제공된 `K-DRIFT_projects.xlsx`의 `Published!A6:G14`에 있는 9편을 자료실의 기준 목록으로 반영했다. 엑셀 원본과 다른 탭은 수정·게시하지 않았다. 목록의 정렬, 논문 원제, 첫 저자, 출판연도는 해당 탭과 일치하며 `data-project-id`로 행의 project ID를 연결했다.
+
+- 누락된 Yoo et al. (2026)의 은하단 과학 주제 논문과 Seon et al. (2025)의 Stripe 82 시러스 색 연구를 추가했다.
+- Ko et al. 프로젝트 소개 논문은 arXiv 최초 공개연도인 2025 대신 목록의 출판연도인 2026으로 표시했다. 페이지의 관련 출처 표기도 함께 갱신했다.
+- 자료실은 총 9편, 프로젝트·기술 4편 / 과학연구 5편이다. 과학연구에는 Science Theme 4편과 시러스 연구 1편이 포함된다.
+- Yoo et al. (2026)의 C-EAGLE SIDM 논문은 이 Published 목록에 포함되지 않아 자료실에서 제외하고, 기존 암흑물질 섹션의 관련 연구 소개와 링크는 유지했다.
+- 연구 주제는 은하 성장, 은하단 환경, 외곽 별 형성, 시러스 광학색, 은하주변매질, GRT의 여섯 주제로 정리했다. 은하단 과학과 시러스·가스 연구 설명을 보강했다.
+
+### 새 논문 링크
+
+- [Yoo et al. 2026, K-DRIFT Science Theme: Illuminating the Next Era of Galaxy Cluster Science](https://arxiv.org/abs/2512.19787)
+- [Seon et al. 2025, Modeling the Optical Colors of Galactic Cirrus Clouds in the Stripe 82 Region](https://arxiv.org/abs/2510.19016)
+
+### 이메일 표시
+
+페이지 원문에서 평문 주소와 정적인 `mailto` 링크를 제거했다. 방문자가 문의 버튼을 누를 때에만 주소와 메일 링크를 생성하며, 다시 숨기면 DOM에서도 제거한다. 키보드로도 조작할 수 있다. 이는 단순 문자열 수집을 줄이는 방식이며 브라우저를 조작하는 수집 봇까지 차단하는 인증 장치는 아니다.
+
+### 확인 기록
+
+Published의 9편과 제목·저자·연도를 대조했고, HTML 로컬 참조 47개와 중복 없는 ID 43개를 확인했다. JavaScript 문법 검사와 전체 9 / 과학연구 5 / 프로젝트·기술 4 필터를 검증했다. 이메일은 초기 DOM에 없고 클릭 후 정확한 메일 링크가 만들어지며 숨기면 다시 제거된다. 데스크톱 1280px와 모바일 320px에서 가로 넘침을 점검했다.

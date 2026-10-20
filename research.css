@@ -21,6 +21,10 @@
 .subsection-label{font-size:12px;letter-spacing:.1em;border-bottom:1px solid #8ea38d;padding-bottom:22px;display:flex;justify-content:space-between;gap:20px}
 .subsection-label span{font-size:12px;letter-spacing:0;color:#607762}
 .questions-grid{display:grid;grid-template-columns:1fr 1fr;column-gap:70px}
+.themes-summary{font-size:14px;line-height:1.95;color:#4e675a;margin:24px 0 8px;max-width:900px}
+.contact-reveal{background:none;padding:0 0 5px;text-align:left}
+.people .contact-details{font-size:13px;margin-top:14px;overflow-wrap:anywhere}
+.contact-details a{text-decoration:underline;text-underline-offset:4px}
 .questions-grid article{padding:35px 0;border-bottom:1px solid #b5c3ad}
 .question-number{display:block;font-size:10px;letter-spacing:.11em;color:#698368;margin-bottom:16px}
 .questions-grid h3{font-size:24px;line-height:1.5;margin-bottom:15px}
@@ -222,6 +226,7 @@
   .research-primer{margin-bottom:40px}.research-primer h3{font-size:24px}.research-primer p{font-size:13px}
   .subsection-label{display:block;font-size:10px}.subsection-label span{display:block;font-size:11px;margin-top:10px}
   .questions-grid{grid-template-columns:1fr}.questions-grid article{padding:27px 0}.questions-grid h3{font-size:22px}.questions-grid article>p{font-size:13px}
+  .themes-summary{font-size:13px}
   .method-principles{grid-template-columns:1fr;gap:26px;margin-top:32px}.method-principles h3{margin-top:12px}
   .rolling-feature,.technical-grid{margin-top:40px;padding-top:32px}.rolling-feature h3{font-size:26px}.rolling-feature p{font-size:13px}
   .rolling-diagram figcaption{font-size:9px}.technical-grid h3{font-size:25px}.technical-grid p{font-size:13px}

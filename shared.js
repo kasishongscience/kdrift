@@ -36,3 +36,23 @@ if (viewer) {
   viewer.addEventListener('click', event => { if (event.target === viewer) viewer.close(); });
   viewer.addEventListener('close', () => { photo.removeAttribute('src'); });
 }
+
+const contactButton = document.querySelector('.contact-reveal');
+const contactDetails = document.querySelector('#contact-details');
+if (contactButton && contactDetails) {
+  contactButton.addEventListener('click', event => {
+    if (!event.isTrusted) return;
+    const expanded = contactButton.getAttribute('aria-expanded') !== 'true';
+    contactDetails.replaceChildren();
+    if (expanded) {
+      const address = String.fromCharCode(106, 119, 107, 111, 64, 107, 97, 115, 105, 46, 114, 101, 46, 107, 114);
+      const link = document.createElement('a');
+      link.textContent = address;
+      link.href = `mailto:${address}`;
+      contactDetails.append(link);
+    }
+    contactDetails.hidden = !expanded;
+    contactButton.setAttribute('aria-expanded', String(expanded));
+    contactButton.textContent = expanded ? '이메일 주소 숨기기' : '프로젝트 문의 · 이메일 보기';
+  });
+}
