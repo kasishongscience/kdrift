@@ -1,12 +1,13 @@
 # K-DRIFT pilot homepage
 
-D안의 이미지 중심 디자인을 선택한 첫 파일럿 홈페이지입니다. 구성원 의견 수렴을 위해 공개한 사이트이며, 하단에 `PILOT 01`을 표시합니다.
+D안의 이미지 중심 디자인을 선택한 파일럿 홈페이지입니다. 구성원 의견 수렴을 위해 공개한 사이트이며, 하단에 `PILOT 02`을 표시합니다.
 
 - 홈페이지: https://kasishongscience.github.io/kdrift/
-- `index.html`: 연구 소개, 관측 성과, 망원경, 연구팀, 논문·영상·보도자료
+- `index.html`: 간단한 연구 소개·관측 성과·망원경·연구팀, 연구 심화, 관측 기술, 성과 검증, 향후 방향, 논문·영상·보도자료
 - `pilot.css`: 파일럿 레이아웃과 반응형 스타일
 - `d.css` / `shared.css`: 기존 D안의 기본 스타일
 - `shared.js`: 모바일 메뉴와 이미지 확대
+- `research.css` / `research.js`: 심화 본문·기술 표·성과·자료실과 논문 주제 필터
 - `assets/`: 사용 이미지, KASI CI, 공개 홍보 PDF
 - `a.html` / `d.html`: 기존 개별 시안 주소를 홈페이지로 연결
 
@@ -14,7 +15,7 @@ D안의 이미지 중심 디자인을 선택한 첫 파일럿 홈페이지입니
 
 GitHub Pages는 `main` 브랜치의 루트에서 배포합니다. 별도 설치나 빌드가 필요하지 않습니다. `.nojekyll`은 정적 파일을 그대로 게시하도록 합니다.
 
-내용은 `index.html`, 화면 구성은 `pilot.css`, 사진은 `assets/`에서 수정하고 커밋한 뒤 push합니다. `assets/`의 파일명과 HTML 참조를 함께 수정하세요. CSS/JS를 변경하면 HTML에 붙인 `?v=pilot01` 값도 갱신하면 됩니다. 배포 후 Pages 최신 빌드의 커밋이 방금 올린 커밋과 일치하는지 확인합니다.
+내용은 `index.html`, 화면 구성은 `pilot.css`, 사진은 `assets/`에서 수정하고 커밋한 뒤 push합니다. `assets/`의 파일명과 HTML 참조를 함께 수정하세요. CSS/JS를 변경하면 HTML에 붙인 `?v=pilot02` 값도 갱신하면 됩니다. 배포 후 Pages 최신 빌드의 커밋이 방금 올린 커밋과 일치하는지 확인합니다.
 
 로컬 미리보기: 이 폴더에서 `python3 -m http.server 8765 --bind 127.0.0.1`을 실행하고 `http://127.0.0.1:8765/`를 엽니다.
 
@@ -37,3 +38,32 @@ GitHub Pages는 `main` 브랜치의 루트에서 배포합니다. 별도 설치�
 ## 검증 기록 — 2026-10-20
 
 데스크톱과 모바일 390px·320px 레이아웃, 가로 넘침, 모바일 메뉴와 섹션 이동, 이미지 확대·Escape 닫기, 광학계 설명 펼침, 기존 D안 주소의 섹션 연결을 브라우저에서 확인했습니다. HTML의 로컬 파일·앵커 33개와 JavaScript 문법 검사를 통과했습니다. 외부 YouTube 영상의 재생 및 실제 휴대전화별 검증은 별도로 수행하지 않았습니다.
+
+## PILOT 02 — 연구 심화 확장 (2026-10-20)
+
+첫 화면과 D안의 개요를 유지하고 연구팀 소개 뒤에 심화 내용을 추가했습니다. 연구 질문 6개, 광학·관측·보정 기술, G1 제원, 검증 성과 4개, SPIE 소개와 향후 방향을 담습니다. 자료실은 논문 7편과 영상 4편으로 확장했습니다. 2019–2026 이력은 제공된 2025.10.24 추가 자료와 2026.01.27 최종 보도자료를 기준으로 보완했습니다.
+
+### 수치와 상태의 구분
+
+- 패스파인더 표면밝기 한계: Byun et al. (2022), r 대역 약 28.5 mag arcsec⁻², **1σ / 10″ × 10″ / 2시간 / 0.3m 패스파인더**. G1의 실측 값으로 표기하지 않습니다.
+- PSF FWHM 3.8 → 1.8 pixel: Lee et al. (2025)에 관한 **SPIE 제공 소개글**에서 확인한 패스파인더 개선 전·후 값. G1의 픽셀 스케일과 혼동하지 않습니다.
+- G1 29–30 mag arcsec⁻²: Ko et al. (2025)의 **설계·탐사 목표**, r 대역 3σ / 10″ × 10″. 현재 달성 깊이나 완료된 탐사로 주장하지 않습니다.
+- G1 입사동공 300 mm와 주경 500 mm를 구분했습니다. 검출기는 8120 × 8120, 픽셀 각크기 1.96″입니다.
+- 롤링 디더링: Byun et al. (2025)의 **모의관측** 비교 결과로 소개합니다. 모식도는 원리를 설명하기 위해 새로 그린 SVG이며 실제 관측 이동량·회전각을 재현하지 않습니다.
+- 장기 우주망원경 방향은 제공된 인터뷰·기획 자료의 연구 구상입니다. 개발 완료·발사 확정으로 표현하지 않습니다.
+
+### 추가 출처
+
+- `PhoFo-Mar-Apr26.pdf`: **Photonics Focus, March/April 2026, SOURCES, 인쇄 p.10 (PDF 12쪽)**. “Imaging the Faintest Structures in the Universe.” K-DRIFT 패스파인더를 소개하며 JATIS DOI를 안내합니다. 잡지 전체나 지면을 복제하지 않고 요약·서지사항을 표기했습니다.
+- [SPIE 제공 소개글 (Phys.org, 2025-12-09)](https://phys.org/news/2025-12-drift-pathfinder-compact-telescope-faint.html): 패스파인더의 제작·오차 분석·성능 개선. 홈페이지의 이 링크는 잡지 원문 링크가 아니라 별도의 SPIE 제공 연구 소개글입니다.
+- [Byun et al. 2022, 패스파인더 성능](https://arxiv.org/abs/2207.14553)
+- [Byun et al. 2025, Dark-Sky Flats](https://arxiv.org/abs/2504.14914)
+- [Byun et al. 2026, Galaxies in the Faint Universe](https://arxiv.org/abs/2602.08283)
+- [Seon et al. 2026, Galactic Cirrus Clouds and Circumgalactic Medium](https://arxiv.org/abs/2601.15665)
+- [Chun et al. 2026, Galaxy Replacement Technique](https://arxiv.org/abs/2603.07968)
+
+YouTube 4편의 제목과 채널은 제공 DOCX와 공개 oEmbed 메타데이터를 대조했습니다. `MrETRJnjgN4`는 핫클립, `WfGkIP8MqtY`는 “우주의 암흑물질 찾는 열쇠, ICL” 원본 강연입니다. 재생시간은 확인하지 않아 표기하지 않습니다.
+
+### 확장판 검증
+
+HTML 로컬 파일·앵커 46개와 새 JS 문법 검사를 통과했습니다. 데스크톱 및 390px·320px 모바일 화면에서 가로 넘침 없이 표시되며, 새 메뉴 이동·논문 필터(전체 7 / 프로젝트·기술 4 / 과학연구 3)·키보드 필터 선택·용어 설명 펼침을 검증했습니다. 외부 영상의 전체 재생과 실제 휴대전화별 검증은 수행하지 않았습니다.
