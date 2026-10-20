@@ -1,0 +1,42 @@
+/* English edition typography. Changes to the Korean page do not update this file. */
+body{word-break:normal}
+h1,h2,h3{letter-spacing:-.025em}
+.hero h1{max-width:1040px;font-size:clamp(44px,4.6vw,66px);letter-spacing:-.035em}
+.hero .intro{max-width:570px}
+.hero-content{padding-top:58px;padding-bottom:150px}
+.hero{min-height:740px}
+.chapter-nav a{font-size:12px}
+.section-heading>p{max-width:430px}
+.mission h2,.instruments h2{font-size:36px}
+.image-legend>span{gap:12px}
+.image-legend small{text-align:right}
+.milestones strong{line-height:1.5}
+.depth-heading h2{font-size:36px}
+.sidm-intro h3{font-size:27px}
+.dm-themes h3{font-size:27px}
+.footer-links>span{white-space:nowrap}
+@media(max-width:1100px){
+  .chapter-nav a{font-size:11px}
+  .mission h2,.instruments h2,.depth-heading h2{font-size:31px}
+}
+@media(max-width:800px){
+  .image-legend small{text-align:left}
+  .hero h1{max-width:700px}
+  .hero .intro{max-width:540px}
+  .chapter-nav a{font-size:12px}
+}
+@media(max-width:640px){
+  .hero h1{font-size:39px;line-height:1.2;margin-top:24px}
+  .hero-content{padding-top:46px;padding-bottom:155px}
+  .hero .intro{font-size:14px;line-height:1.8}
+  .hero-actions{gap:20px}
+  .hero-bottom>span{font-size:7px;letter-spacing:.09em}
+  .hero-bottom .photo-credit{font-size:9px}
+  .mission h2,.instruments h2,.depth-heading h2{font-size:29px}
+  .chapter-nav a{font-size:10px}
+  .dm-themes h3{font-size:24px}
+  .paper-filters{flex-wrap:wrap}
+  .spec-table th{width:42%}
+  .footer-links{flex-wrap:wrap;gap:12px}
+}
+@media(max-width:360px){.hero h1{font-size:34px}.hero-bottom>span{font-size:6.5px}}
