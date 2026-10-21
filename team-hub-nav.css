@@ -1,0 +1,26 @@
+/* Shared navigation only; Korean and English research content remain independent. */
+.nav{gap:16px}
+.team-hub-link{order:3;display:inline-flex;align-items:center;justify-content:center;gap:8px;flex-shrink:0;white-space:nowrap;min-height:40px;padding:8px 12px;border:1px solid #a8c394;border-radius:4px;background:#deefc2;color:#182c23;font-size:12px;font-weight:600;line-height:1.4}
+.team-hub-link:hover{background:#edf7dd}
+.team-hub-link:focus-visible{outline:2px solid #fff;outline-offset:4px}
+.team-hub-link span{font-size:15px;line-height:1}
+.menu-toggle{order:4}
+@media(max-width:1250px){
+  .brand{margin-right:auto}
+  .menu-toggle{display:block}
+  .nav-links{position:absolute;top:100%;left:0;right:0;padding:18px 24px 24px;background:#0a1918;display:none;flex-direction:column;align-items:stretch;gap:4px;border-bottom:1px solid #7a8e8140}
+  .nav-links.is-open{display:flex}
+  .nav-links a{padding:12px}
+}
+@media(max-width:760px) and (min-width:641px){
+  .nav{display:grid;grid-template-columns:1fr auto;gap:8px 16px;padding-block:10px}
+  .brand{grid-column:1;grid-row:1}
+  .menu-toggle{grid-column:2;grid-row:1;justify-self:end}
+  .language-switch{grid-column:1;grid-row:2;justify-self:start}
+  .team-hub-link{grid-column:2;grid-row:2;justify-self:end}
+}
+@media(max-width:640px){
+  .nav{gap:6px 12px}
+  .language-switch{grid-column:1;grid-row:2;justify-self:start;margin-top:0}
+  .team-hub-link{grid-column:2;grid-row:2;justify-self:end;font-size:11px;padding:8px 10px}
+}
